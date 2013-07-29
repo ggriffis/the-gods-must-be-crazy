@@ -1,0 +1,27 @@
+<div id="god">
+  <h1><%= @god.name %></h1>
+  <p>
+    <h2>Mission statement:</h2>
+    <%= @god.mission_statement %>
+  </p>
+</div>
+
+<h3>My Guardian Angels></h3>
+
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Top Virtue</th>
+   </thead>
+   <tbody>
+     <% @god.guardian_angels.each do |a| %>
+       <tr>
+         <td><%= link_to a.name, god_guardian_angel_path(@god,a) %></td>
+         <td><%= a.top_virtue %></td>
+       </tr>
+     <% end %>
+   </tbody>
+</table>
+
+<%= link_to 'Back', gods_path %>
+<%= link_to "Add guardian angel", new_god_guardian_angel_path(@god) %>

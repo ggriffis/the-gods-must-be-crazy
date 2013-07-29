@@ -1,0 +1,13 @@
+<%= form_for [@god, @guardian_angel] do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :top_virtue %><br />
+    <%= f.text_field :top_virtue %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

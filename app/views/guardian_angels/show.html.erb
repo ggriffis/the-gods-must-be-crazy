@@ -1,0 +1,18 @@
+<div id="guardian_angel">
+  <h2><%= @guardian_angel.name %></h2>
+  <p>
+    <b>Top virtue:</b>
+    <%= @guardian_angel.top_virtue %>
+  </p>
+</div>
+
+<% if !@guardian_angel.human.nil?%>
+  <p>
+    <b>My Favorite Human!<b>
+      <%= link_to '@guardian_angel.human.name', god_guardian_angel_human_path(@guardian_angel.human) %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', gods_path %>
+<%= link_to "Create my human!",
+  new_god_guardian_angel_human_path(@god, @guardian_angel) %>

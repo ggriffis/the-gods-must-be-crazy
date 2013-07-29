@@ -1,0 +1,13 @@
+<%= form_for(@god) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :mission_statement %><br />
+    <%= f.text_field :mission_statement %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
