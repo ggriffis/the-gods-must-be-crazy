@@ -6,13 +6,14 @@
   </p>
 </div>
 
-<% if !@guardian_angel.human.nil?%>
+<% if !@guardian_angel.person.nil?%>
   <p>
     <b>My Favorite Human!<b>
-      <%= link_to '@guardian_angel.human.name', god_guardian_angel_human_path(@guardian_angel.human) %>
+      <%= link_to @guardian_angel.person.name, god_guardian_angel_person_path(@god, @guardian_angel,
+        @guardian_angel.person) %>
   </p>
 <% end %>
 
 <%= link_to 'Back', gods_path %>
 <%= link_to "Create my human!",
-  new_god_guardian_angel_human_path(@god, @guardian_angel) %>
+  new_god_guardian_angel_person_path(@god, @guardian_angel) %>

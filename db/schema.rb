@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130729192628) do
+ActiveRecord::Schema.define(version: 20130729201532) do
 
   create_table "gods", force: true do |t|
     t.string   "name"
@@ -26,12 +26,12 @@ ActiveRecord::Schema.define(version: 20130729192628) do
     t.integer  "god_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "human_id"
+    t.integer  "person_id"
   end
 
   add_index "guardian_angels", ["god_id"], name: "index_guardian_angels_on_god_id"
 
-  create_table "humans", force: true do |t|
+  create_table "people", force: true do |t|
     t.string   "name"
     t.string   "purpose"
     t.datetime "created_at"

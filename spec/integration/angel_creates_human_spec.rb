@@ -17,6 +17,7 @@ feature 'Creating a human and assigning it to an angel' do
     click_link 'Create my human!'
     fill_in 'Name', :with => "Ginger"
     fill_in 'Purpose', :with => "To find and create and experience beauty"
+    click_button 'Create Person'
     page.should have_content("Human was successfully created.")
     page.should have_content("Ginger")
     page.current_path.should == god_guardian_angel_path(god, angel)

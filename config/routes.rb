@@ -4,7 +4,7 @@ TheGodsMustBeCrazy::Application.routes.draw do
 
   resources :gods do
     resources :guardian_angels do
-      resources :humans
+      resources :people
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
