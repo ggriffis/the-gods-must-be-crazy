@@ -11,7 +11,7 @@ module TheGodsMustBeCrazy
 
     config.action_mailer.delivery_method   = :postmark
     config.action_mailer.postmark_settings = { :api_key => ENV['POSTMARK_API_KEY'] }
-    config.action_mailer.default_url_options = { host: 'the-gods-must-be-crazy.com' }
+    config.action_mailer.default_url_options = { host: 'the-gods-must-be-crazy.herokuapp.com' }
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
