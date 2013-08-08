@@ -48,6 +48,7 @@ end
 gem 'unicorn'
 
 gem 'postmark-mitt', '0.0.8'
+gem "postmark"
 gem 'postmark-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

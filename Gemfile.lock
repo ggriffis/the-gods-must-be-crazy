@@ -194,6 +194,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   pg
+  postmark
   postmark-mitt (= 0.0.8)
   postmark-rails
   pry-debugger
