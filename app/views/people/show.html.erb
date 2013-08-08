@@ -1,16 +1,6 @@
 <div id="person">
   <h2><%= @person.name %></h2>
-  Number of posts: <%= @person.posts.size %><br>
-  Person ID: <%= @person.id %><br>
   <% @person.posts.each do |p| %>
-    <h1><%= p.title %></h1>
-    <p>by <%= p.person.name %></p>
-    <%= p.body %>
-    <hr />
-  <% end %>
-  <p>All posts in the database: </p>
-
-  <% Post.all.each do |p| %>
     <h1><%= p.title %></h1>
     <p>by <%= p.person.name %></p>
     <%= p.body %>
