@@ -6,6 +6,7 @@ class Post < ActiveRecord::Base
     person = Person.find(id_from_email.to_i)
     if person
       post = person.posts.new
+      post.person = person
       post.message_id = mitt.message_id
       post.title      = mitt.subject
       post.body = if mitt.text_body.blank?
