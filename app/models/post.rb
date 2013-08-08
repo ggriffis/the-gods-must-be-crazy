@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  belongs_to :user
+  belongs_to :person
 
   def self.create_from_postmark(mitt)
     id_from_email = mitt.to.split("@").first.split("+").last
