@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130729201532) do
+ActiveRecord::Schema.define(version: 20130808011317) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "gods", force: true do |t|
     t.string   "name"
@@ -29,13 +32,20 @@ ActiveRecord::Schema.define(version: 20130729201532) do
     t.integer  "person_id"
   end
 
-  add_index "guardian_angels", ["god_id"], name: "index_guardian_angels_on_god_id"
+  add_index "guardian_angels", ["god_id"], name: "index_guardian_angels_on_god_id", using: :btree
+
+  create_table "number_calculators", force: true do |t|
+    t.string  "number"
+    t.integer "base"
+    t.string  "base_ten_number"
+  end
 
   create_table "people", force: true do |t|
     t.string   "name"
     t.string   "purpose"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
   end
 
 end

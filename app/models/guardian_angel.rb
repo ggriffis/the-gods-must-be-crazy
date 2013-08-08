@@ -1,4 +1,4 @@
 class GuardianAngel < ActiveRecord::Base
   belongs_to :person
-  has_one :god
+  belongs_to :god
 end
