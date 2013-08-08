@@ -1,5 +1,6 @@
 class Api::PostsController < ApplicationController
   skip_before_filter :verify_authenticity_token
+  before_action { request.body.rewind }
 
   def create
     # make sure the thing posting has rights to post here... maybe with
