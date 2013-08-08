@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
 
   def self.create_from_postmark(mitt)
     id_from_email = mitt.to.split("@").first.split("+").last
+    logger.info ("id_from_email = " + "id_from_email")
     person = Person.find(id_from_email.to_i)
     if person
       post = person.posts.new
