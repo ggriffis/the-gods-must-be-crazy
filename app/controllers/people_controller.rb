@@ -21,6 +21,11 @@ class PeopleController < ApplicationController
     end
   end
 
+  def show
+    @person = @guardian_angel.person
+
+  end
+
 
 private
   def human_params

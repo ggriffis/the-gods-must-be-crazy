@@ -1,0 +1,9 @@
+<div id="person">
+  <h2><%= @person.name %></h2>
+  <% @person.posts.each do |p| %>
+    <h1><%= p.title %></h1>
+    <p>by <%= p.person.name %></p>
+    <%= p.body %>
+    <hr />
+  <% end %>
+</div>

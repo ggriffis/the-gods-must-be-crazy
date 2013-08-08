@@ -1,7 +1,9 @@
 TheGodsMustBeCrazy::Application.routes.draw do
 
   root :to => "gods#index"
-
+  namespace :api do
+    resources :posts, :only => [ :create ]
+  end
   resources :gods do
     resources :guardian_angels do
       resources :people
