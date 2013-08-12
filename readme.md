@@ -2,3 +2,4 @@ An app to demonstrate a One-to-Many (via has_one :through/has_many) database ass
 In order to try the email feature, you'll need to create a "god", add a "guardian angel", and then create a human in order for the email to get sent, then reply to the email, then view the human to see the email you sent back.
 
 ![Image](https://raw.github.com/ggriffis/the-gods-must-be-crazy/master/app/assets/images/screen_shot.png)
+MIT License: http://ginger.mit-license.org
